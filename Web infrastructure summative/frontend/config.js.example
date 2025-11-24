@@ -1,0 +1,3 @@
+window.API_CONFIG = {
+    apiKey: 'YOUR_SERPAPI_KEY_HERE'
+};
