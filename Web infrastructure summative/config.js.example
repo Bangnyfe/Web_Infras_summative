@@ -1,0 +1,8 @@
+// API Configuration Template
+// Copy this file to config.js and add your actual API key
+// DO NOT commit config.js to version control
+
+window.API_CONFIG = {
+    apiKey: 'YOUR_SERPAPI_KEY_HERE'
+};
+
