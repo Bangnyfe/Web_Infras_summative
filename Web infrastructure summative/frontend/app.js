@@ -43,10 +43,17 @@ class EventFinder {
         }
     }
 
+    /**
+     * 
+     * @param {string} city 
+     * @returns 
+     */
     async fetchEvents(city) {
-        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-        const apiBaseUrl = isLocalhost ? 'http://localhost:3000' : 'http://44.201.182.44:3000';
-        const apiUrl = `${apiBaseUrl}/api/events?city=${encodeURIComponent(city)}`;
+        // const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+        // const apiBaseUrl = isLocalhost ? 'http://localhost:3000' : 'http://44.201.182.44';
+        city = city[0].toUpperCase() + city.slice(1);
+        const apiUrl = `http://localhost:3000/api/events?city=${encodeURIComponent(city)}`;
+        
 
         try {
             const response = await fetch(apiUrl);
